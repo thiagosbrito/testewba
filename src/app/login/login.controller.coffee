@@ -15,6 +15,9 @@ angular.module 'testeWba'
         response_type = "token"
         url = "https://instagram.com/oauth/authorize/?scope="+scope+"&client_id="+client_id+"&redirect_uri="+redirect_uri+"&response_type="+response_type
         window.location.replace url
+
+      if window.localStorage.satellizer_token
+        $state.go 'teste.dashboard'
   
       return
 
