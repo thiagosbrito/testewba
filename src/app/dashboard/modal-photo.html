@@ -1,0 +1,11 @@
+<div class="modal-header">
+    <h4 class="modal-title" ng-bind="photo.caption.text"></h4>
+    <small class="pull-right"><i class="fa fa-heart"></i> {{photo.likes.count}}</small>
+</div>
+<div class="modal-body">
+    <img ng-src="{{photo.images.standard_resolution.url}}" alt="{{photo.caption.text}}" class="img-responsive">
+
+</div>
+<!-- <div class="modal-footer">
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Fechar</button>
+</div> -->

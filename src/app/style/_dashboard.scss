@@ -1,0 +1,28 @@
+.info-holder {
+	background-color: #ccc;
+	border-radius: 4px;
+	margin: 10px 0;
+	.img-user {
+		margin-top: 9px;
+		width: 80px;
+	}
+	.info-user {
+		border-left: 1px solid #999;
+		margin-left: 15px;
+		.title {
+			font-family: $roboto-slab;
+			font-weight: bolder;
+			margin-top: 10px;
+		}
+		.fa-heart {
+			color: #cd201f
+		}
+		.fa-instagram {
+			color: #3f729b
+		}
+	}
+}
+
+.navbar-brand {
+	font-family: $roboto-slab
+}

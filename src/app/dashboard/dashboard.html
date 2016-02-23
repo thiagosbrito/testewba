@@ -1,0 +1,22 @@
+<div class="row info-holder">
+  <div class="col-lg-1">
+    <img ng-src="{{userInfo.profile_picture}}" alt="" class="img-circle img-responisve img-user">
+  </div>
+  <div class="col-lg-10 info-user">
+    <p class="title" ng-bind="userInfo.full_name"></p>
+    <p><em ng-bind="userInfo.bio"></em></p>
+    <p>
+      <span><i class="fa fa-heart"></i> {{userInfo.counts.followed_by}}</span>
+      <span><i class="fa fa-instagram"></i> {{userInfo.counts.media}}</span>
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div ng-repeat="item in userMedia.data" ng-click="openModalPhoto(item)" class="col-lg-3">
+      <img ng-src="{{item.images.thumbnail.url}}" class="thumbnail pull-left img-responsive">
+    </div>
+  </div>
+</div>
+    
+
