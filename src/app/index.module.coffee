@@ -7,5 +7,6 @@ angular.module 'testeWba', [
 	'ngAria',
 	'ui.router',
 	'ui.bootstrap',
-	'toastr'
+	'toastr',
+	'angular-loading-bar'
 ]

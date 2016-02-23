@@ -5,7 +5,8 @@ angular.module 'testeWba'
     'InstagramService',
     '$stateParams',
     '$http',
-    ($scope, $modal, InstagramService, $stateParams, $http)->
+    '$timeout',
+    ($scope, $modal, InstagramService, $stateParams, $http, $timeout)->
 
       $scope.openModalPhoto = (item)->
         modalInstance = $modal.open
@@ -15,26 +16,32 @@ angular.module 'testeWba'
           resolve: 
             item: ()->
               item
+
       InstagramService.getUserInfo().then(
         (res)->
           $scope.userInfo = res.data.data
+          $scope.getInfos()
         (err)->
           console.log err
       )
 
-      InstagramService.getPhotos().then(
-        (res)->
-          $scope.userMedia = res.data
-        (err)->
-          console.log err
-      )
+      $scope.getInfos = () ->
+        InstagramService.getPhotos().then(
+          (res)->
+            $scope.userMedia = res.data
+          (err)->
+            console.log err
+        )
 
-      InstagramService.getFollowers().then(
-        (res)->
-          console.log res.data
-        (err)->
-          console.log err.data
-      )
+        # This service cannot be used in SANDBOX mode
+        InstagramService.getFollowers().then(
+          (res)->
+            # console.log res.data
+          (err)->
+            # console.log err.data
+        )
+
+      $timeout $scope.getInfos(),5000
 
       return
   ]
