@@ -1,6 +1,9 @@
 # Teste Front-end WBA
 Test for an Job position as Front-End developer
 
+First of all clone this repository at your machine
+>```git clone https://github.com/thiagosbrito/testewba.git```
+
 In order to run this test you should have running the follow items installed at your machine
 
 ### NPM
