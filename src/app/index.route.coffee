@@ -41,4 +41,4 @@ angular.module 'testeWba'
         controller: 'OAuthLoginController'
 
 
-    $urlRouterProvider.otherwise '/dashboard'
+    $urlRouterProvider.otherwise '/login'
